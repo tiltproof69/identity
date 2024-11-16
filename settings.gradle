@@ -1,14 +1,14 @@
 pluginManagement {
     repositories {
-        maven { url "https://maven.fabricmc.net/" }
-        maven { url "https://maven.architectury.dev/" }
-        maven { url "https://maven.minecraftforge.net/" }
         gradlePluginPortal()
+        maven { url = 'https://maven.architectury.dev' }
+        maven { url = 'https://maven.fabricmc.net/' }
+        maven { url = 'https://maven.minecraftforge.net/' }
+        mavenCentral()
     }
 }
 
-include("common")
-include("fabric")
-include("forge")
+rootProject.name = 'identity'
 
-rootProject.name = "identity"
+include 'common'
+include 'forge'
